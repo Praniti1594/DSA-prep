@@ -1,0 +1,12 @@
+# Index Error in Comparison: In if s[i] != s[l-i], the last index should be l-i-1 instead of l-i. Since Python uses 0-based indexing, s[l-i] will go out of bounds.
+def palindrome(s):
+    l=len(s)
+    for i in range(l//2):
+        if s[i]!=s[l-i-1]:
+            return False
+    return True
+string=input("enter string:")
+if palindrome(string)==True:
+    print("yes madam str is palindrome")
+else:
+    print("Nahi madam ji str is not palindrome")
